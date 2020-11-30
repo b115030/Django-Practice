@@ -1,0 +1,21 @@
+<h1>Our greeting list</h1>
+<ul>
+    {% for list in greeting_list %}
+    <li>{{list}}</li>
+    {% endfor %}
+</ul>
+
+<form action = "" method = "post"> 
+    {% csrf_token %} 
+    <ul> 
+        {{ form.as_ul }} 
+    </ul> 
+    <input type="submit" value="Submit"> 
+</form> 
+
+
+<form action = "" method = "get"> 
+    <label for="your_name">Your name: </label> 
+    <input id="your_name" type="text" name="your_name"> 
+    <input type="submit" value="OK"> 
+</form> 
